@@ -344,6 +344,24 @@ original text, so you see your own message in real Japanese rather than the enco
 The decode lives in the `messageText` getter of `NewConsoleMessageMessageParser`, which is
 where an incoming private message is read before it's shown.
 
+There's a smaller discovery worth recording here too. Private messages run an older
+generation of the encoding than room chat, three base-62 digits per character instead of
+two, and that difference turned out to matter. The server accepts a private message up to
+some fixed payload length, and a message that goes over it doesn't error, doesn't reject
+loudly, it just sits there in gray, sent but never delivered, with nothing in the client
+telling you why.
+
+Finding the actual number took two separate manual counts, and the first one was wrong. A
+hand-counted 112-character Latin message that supposedly still went through didn't square
+with a 126-character encoded Japanese message that also went through, since a fixed byte
+ceiling can't let the larger payload past and reject the smaller one. Recounting by hand
+a second time turned "112" into "120," and the contradiction disappeared. Both numbers
+turned out to sit close together, both consistent with the same ceiling somewhere around
+126 characters, which is exactly the length of the longest confirmed Japanese message:
+41 glyphs at three digits each, plus the three-character `~j~` marker. The room chat
+input already truncates before you can type past its limit; the messenger's input field
+had no such guard, so it was possible to type a message the server would silently refuse.
+
 The beautiful consequence of all of it: a player on an *unmodified* client sees the raw
 payload, a little run of gibberish like `8aa7190__ajau1121`, while every modified client
 in the room reads it as clean 日本語. The Japanese is real, it survives a hostile server,
