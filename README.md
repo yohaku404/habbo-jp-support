@@ -136,7 +136,7 @@ over the top. Then he ran my G-Earth expression against it.
 The glyph rendered.
 
 A real Japanese character, in a real bubble, in a live session. He sent me the screenshot
-with the words *"Got it, you f***** bastard"*.
+with the words *"Got it, you f$%ˆ&#@ bastard"*.
 
 I want to be careful and honest about the credit, because we were careful about it that
 night too. The byte-level G-Earth expression, the thing that proved the packet path and
