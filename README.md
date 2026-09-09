@@ -12,7 +12,7 @@
 
 ## Prologue: the room that closed
 
-If you were there, you remember it differently than the shutdown notice did. habbo.jp
+If you were there, you remember it differently than the shutdown notice did. Habbo Japan
 was never a line in a press release. It was a specific shade of orange on the hotel view.
 It was a font that sat a particular way inside the chat bubbles. It was ゴシゥク furniture
 and ロストシティ and a house style of spelling that was slightly wrong
