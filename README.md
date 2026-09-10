@@ -362,6 +362,17 @@ turned out to sit close together, both consistent with the same ceiling somewher
 input already truncates before you can type past its limit; the messenger's input field
 had no such guard, so it was possible to type a message the server would silently refuse.
 
+The first attempt at fixing that fixed nothing. Watching the field for changes and
+reverting it once the projected message got too long sounded reasonable and compiled
+clean, and did precisely nothing at runtime: by the time a "something changed" event
+fires, the character is already sitting in the field, already rendered, already typed.
+Writing a shorter string back over it doesn't put the toothpaste back in the tube. The
+actual fix lived one layer further down than expected, on the native event that fires
+*before* a keystroke is accepted rather than after, the same one already quietly capping
+line counts elsewhere in the client. Once the guard moved there, blocking the character
+outright instead of trying to undo it, it worked exactly like the room chat limit always
+had: type up to the edge, and the wall simply isn't there to walk through.
+
 The beautiful consequence of all of it: a player on an *unmodified* client sees the raw
 payload, a little run of gibberish like `8aa7190__ajau1121`, while every modified client
 in the room reads it as clean 日本語. The Japanese is real, it survives a hostile server,
