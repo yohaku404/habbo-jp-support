@@ -562,7 +562,13 @@ eat your evening, collected in one place:
   position isn't cosmetic; it decides what survives.
 - Chaining the catalog/landing loaders off the `jpcharset.txt` load: if that one file goes
   missing, the whole chain (catalog, help pages, buttons) falls together while `texts_jp`
-  survives on its own path. Decouple it, or at least know the symptom.
+  survives on its own path. Decouple it, or at least know the symptom. *(Months later,
+  moving `jpcharset.txt` itself onto the same remote-fetch pattern as the other three files
+  did exactly this: the catalog and help pages quietly stopped loading, not because the
+  fetch failed, but because nothing had asked for them at all. The warning above was right
+  the whole time; it just took forgetting it once to prove it.)*
+- Assuming you found where a string comes from. Force a marker and *prove* it before you
+  build the real fix.
 - Assuming you found where a string comes from. Force a marker and *prove* it before you
   build the real fix.
 - Assuming a phrase-level fallback can sit anywhere near a key-indexed localization system
