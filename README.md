@@ -198,6 +198,10 @@ and one of them was quietly degrading the whole UI in the name of embedding a fe
 Sometimes the only way to keep a tool's benefit without its side effect is to go one level
 below it and do the surgery by hand.
 
+That hand surgery eventually became a small tool, so nobody has to redo it byte by byte. It
+lives in `font-tool/` in this repo: point it at a client SWF and it appends the Japanese glyphs
+while leaving the Latin untouched.
+
 ---
 
 ## Part V: From one glyph to a whole language
