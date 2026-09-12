@@ -4,6 +4,12 @@
 
 *A long read for anyone who logged into habbo.jp one last time before the lights went out. Part memory, part engineering notebook.*
 
+---
+
+**Also in this repo:** an [implementation guide](implementation-guide.md) for adding this
+Japanese support to a HabboAirPlus-family client, and [`font-tool/`](font-tool/), the utility
+that embeds the Japanese glyphs without softening the Latin UI.
+
 <div align="center"><img width="720" height="431" alt="View_jp" src="https://github.com/user-attachments/assets/0b1da872-da9e-41c9-87dd-f6cc617d4cda" />
 </div>
 <p align="center"><sub><b>Image 1.</b> The hotel view menu, as it looked on the original habbo.jp.</sub></p>
