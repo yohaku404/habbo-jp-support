@@ -569,8 +569,6 @@ eat your evening, collected in one place:
   the whole time; it just took forgetting it once to prove it.)*
 - Assuming you found where a string comes from. Force a marker and *prove* it before you
   build the real fix.
-- Assuming you found where a string comes from. Force a marker and *prove* it before you
-  build the real fix.
 - Assuming a phrase-level fallback can sit anywhere near a key-indexed localization system
   → it can't. If every read and every write in the pipeline is keyed, there's no seam left
   for a value to pass through unintercepted. Confirm the architecture before building
