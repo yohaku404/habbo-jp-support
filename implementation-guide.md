@@ -558,4 +558,4 @@ to track all of this by hand.
 
 *Questions, corrections, and requests for exact file samples are welcome through the repository.*
 
-Built by Yohaku, with the font rendering breakthrough by [@maxph3](https://github.com/maxph3).
+Built by [Yohaku](https://github.com/yohaku404), with the font rendering breakthrough by [Max](https://github.com/maxph3).
