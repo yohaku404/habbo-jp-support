@@ -1,27 +1,49 @@
 # Font attribution and license notice
 
 The Japanese glyphs in `jp-glyphs-by-style.bin` (and in any patched SWF this tool
-produces) are taken from:
+produces) come from the three fonts below. All permit redistribution and
+embedding. License texts are in `OFL.txt` (Noto and DotGothic16) and
+`MPLUS-FONT-LICENSE.txt` (PixelMplus); keep both alongside the pack.
 
-**Noto Sans CJK JP** (also distributed by Adobe as **Source Han Sans JP**)
+The pack matches the HabboAirPlus client this project ships (the one the article
+describes), so its font mix is that client's.
+
+## Ubuntu-family styles (Ubuntu, UbuntuCondensed, UbuntuMedium, UbuntuThick)
+
+**Noto Sans CJK JP** (distributed by Adobe as **Source Han Sans JP**)
 Copyright 2014-2021 Adobe (https://www.adobe.com/), with Google.
-Licensed under the **SIL Open Font License, Version 1.1**.
+**SIL Open Font License 1.1** (see `OFL.txt`).
 
-The full license text is in [`OFL.txt`](OFL.txt) in this folder, and is also
-available at https://openfontlicense.org and https://github.com/notofonts/noto-cjk.
+Verified: the regular-weight glyphs match Noto Sans CJK JP geometrically (bounding
+boxes identical across sampled kana and kanji, allowing for the SWF and TrueType
+axis conventions). The other weights and the italics are the corresponding Noto
+weights.
 
-## What this means for reuse
+## Volter and Volter Bold styles
 
-The SIL OFL 1.1 permits redistribution, modification (including subsetting), and
-embedding. This glyph pack is a subset of Noto Sans CJK JP, redistributed under the
-same license, with the notice kept as required.
+Two sources, both free:
 
-Reserved Font Names: under the OFL you may not release a modified font under the
-names "Noto" or "Source Han". This pack is glyph data for embedding, not a font
-released under those names, so it does not use them.
+- letters, kana, and kanji: **DotGothic16**
+  Copyright 2020 The DotGothic16 Project Authors (Fontworks).
+  **SIL Open Font License 1.1** (see `OFL.txt`).
+- symbols and special punctuation (arrows, stars, the reference mark, degree and
+  currency signs, gender and suit symbols, and similar; about 95 glyphs):
+  **PixelMplus**
+  Copyright (C) 2013 itouhiro; Copyright (C) 2002-2013 M+ FONTS PROJECT.
+  **M+ FONT LICENSE** (see `MPLUS-FONT-LICENSE.txt`).
 
-## Rebuilding from your own font
+Verified: the regular Volter letters/kana/kanji match DotGothic16 geometrically,
+and the ~95 symbol glyphs match a PixelMplus weight and not DotGothic16 (they are
+most consistent with PixelMplus 10 Regular; the M+ FONT LICENSE is the same across
+PixelMplus weights).
 
-If you would rather not rely on this pack, `build-glyph-pack.py` lets you build your
-own from any font you are entitled to use. Noto Sans CJK JP is a good default: it is
-free, OFL-licensed, and covers the Japanese ranges this tool needs.
+## Reserved names
+
+Under the OFL you may not release a modified font under the reserved names
+"Noto", "Source Han", or "DotGothic16". This pack is glyph data for embedding, not
+a font released under those names, so it does not use them.
+
+## Rebuilding from your own fonts
+
+`build-glyph-pack.py` lets you build your own pack from fonts you are entitled to
+use, if you would rather not rely on this one.
