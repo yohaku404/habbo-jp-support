@@ -558,4 +558,4 @@ to track all of this by hand.
 
 *Questions, corrections, and requests for exact file samples are welcome through the repository.*
 
-Built by [Yohaku](https://github.com/yohaku404), with the font rendering breakthrough by [Max](https://github.com/maxph3).
+Built by [Yohaku](https://github.com/yohaku404), with the font rendering breakthrough and the HTML archives used as the source for translating the all content with no key in Habbo's official `external_texts` by [Max](https://github.com/maxph3).
