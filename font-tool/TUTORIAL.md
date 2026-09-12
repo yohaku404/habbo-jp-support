@@ -94,14 +94,24 @@ with slightly different glyph sets, the builder keeps the majority variant.
 
 ---
 
-## Font licensing (read before redistributing the pack)
+## Font licensing
 
 The tool script is just byte manipulation and is free to share. The **glyph pack
-is font data**: the actual Japanese glyph outlines. Whether you may redistribute
-it depends on the license of the font those glyphs came from. Before publishing a
-pack, confirm that the source font's license permits redistribution and embedding.
-If it does not, ship the tool and `build-glyph-pack.py` and let each user build
-their own pack from a font they are entitled to use.
+is font data**: the actual Japanese glyph outlines.
+
+The glyphs in `jp-glyphs-by-style.bin` come from three free fonts: the Ubuntu-style
+glyphs are **Noto Sans CJK JP** (Adobe's **Source Han Sans JP**), OFL 1.1; the
+Volter-style pixel letters/kana/kanji are **DotGothic16**, OFL 1.1; and about 95
+Volter symbols (arrows, stars, and similar) are **PixelMplus**, M+ FONT LICENSE.
+All permit redistribution, subsetting, and embedding, so this pack is
+redistributable. The license texts are in [`OFL.txt`](OFL.txt) and
+[`MPLUS-FONT-LICENSE.txt`](MPLUS-FONT-LICENSE.txt), with full attribution and proof
+status in [`NOTICE.md`](NOTICE.md); keep them alongside the pack, and do not release
+a modified font under the reserved names "Noto", "Source Han", or "DotGothic16".
+
+If you build a pack from a different font with `build-glyph-pack.py`, check that
+font's own license first. If it does not allow redistribution, ship only the tool
+and `build-glyph-pack.py` and let each user build their own pack.
 
 ---
 
