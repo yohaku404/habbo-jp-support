@@ -104,8 +104,8 @@ glyphs are **Noto Sans CJK JP** (Adobe's **Source Han Sans JP**), OFL 1.1; the
 Volter-style pixel letters/kana/kanji are **DotGothic16**, OFL 1.1; and about 95
 Volter symbols (arrows, stars, and similar) are **PixelMplus**, M+ FONT LICENSE.
 All permit redistribution, subsetting, and embedding, so this pack is
-redistributable. The license texts are in [`OFL.txt`](OFL.txt) and
-[`MPLUS-FONT-LICENSE.txt`](MPLUS-FONT-LICENSE.txt), with full attribution and proof
+redistributable. The license texts are in [`LICENSE-OFL.txt`](https://github.com/yohaku404/habbo-jp-support/blob/main/font-tool/LICENSE-OFL.txt) and
+[`LICENSE-MPlus.txt`](https://github.com/yohaku404/habbo-jp-support/blob/main/font-tool/LICENSE-MPlus.txt), with full attribution and proof
 status in [`NOTICE.md`](NOTICE.md); keep them alongside the pack, and do not release
 a modified font under the reserved names "Noto", "Source Han", or "DotGothic16".
 
