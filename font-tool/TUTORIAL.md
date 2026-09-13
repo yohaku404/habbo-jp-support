@@ -75,6 +75,22 @@ patched baseline) or on the final built SWF. Both work.
 
 ---
 
+## Bold and italic
+
+The pack carries a set of glyphs per font style (regular, bold, italic,
+bold-italic), so bold and italic Japanese render from the right glyphs instead of
+falling back. Bold is a real weight (Noto Sans CJK JP Bold). Italic is not: CJK
+fonts have no true italic, so the italic and bold-italic slots are the upright
+glyphs sheared by about 12 degrees to match the client's Latin italic. That
+faux-italic is baked into the pack by `shear-italic.py`:
+
+```
+python shear-italic.py jp-glyphs-by-style.bin [factor]
+```
+
+`factor` defaults to -0.22 (the SWF y-down shear; more negative leans further).
+Run it after `build-glyph-pack.py` if you rebuild the pack from your own fonts.
+
 ## The glyph pack
 
 `jp-glyphs-by-style.bin` holds the Japanese glyph shapes and advances, keyed by
@@ -104,8 +120,8 @@ glyphs are **Noto Sans CJK JP** (Adobe's **Source Han Sans JP**), OFL 1.1; the
 Volter-style pixel letters/kana/kanji are **DotGothic16**, OFL 1.1; and about 95
 Volter symbols (arrows, stars, and similar) are **PixelMplus**, M+ FONT LICENSE.
 All permit redistribution, subsetting, and embedding, so this pack is
-redistributable. The license texts are in [`LICENSE-OFL.txt`](https://github.com/yohaku404/habbo-jp-support/blob/main/font-tool/LICENSE-OFL.txt) and
-[`LICENSE-MPlus.txt`](https://github.com/yohaku404/habbo-jp-support/blob/main/font-tool/LICENSE-MPlus.txt), with full attribution and proof
+redistributable. The license texts are in [`OFL.txt`](OFL.txt) and
+[`MPLUS-FONT-LICENSE.txt`](MPLUS-FONT-LICENSE.txt), with full attribution and proof
 status in [`NOTICE.md`](NOTICE.md); keep them alongside the pack, and do not release
 a modified font under the reserved names "Noto", "Source Han", or "DotGothic16".
 
